@@ -32,7 +32,7 @@ M-F 9:30 am – 4:30 pm
         
 - Frontend (HTML/CSS/JS):
     - https://www.freecodecamp.org/ (Practice, projects, (almost) textbook all-in-one!)
-    - https://learnxinyminutes.com/docs/javascript/
+    - https://sayazamurai.github.io/python-vs-javascript/#control-flow (Python3 and ES6 JS side by side comparisons)
     - https://sass-lang.com/guide (SASS: CSS preprocessor tutorial)
     - https://vuejs.org/v2/guide/ (Vue.js official guide)
     - https://www.youtube.com/watch?v=5LYrN_cAJoA&list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa (Vue.js video tutorial)
