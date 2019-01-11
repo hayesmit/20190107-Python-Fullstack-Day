@@ -52,6 +52,9 @@ def double_letters(text):
         doubled += char*2
     return doubled
 
+    # # equivalent using comprehensions
+    # return ''.join([char*2 for char in text])
+
 def random_element(a):
     """
     returns random element selected from list a
@@ -76,3 +79,5 @@ def combine_lists_to_dict(keys, values):
     {'a': 'apples', 'b': 'bananas', 'c': 'cherries'}
     """
     return dict(zip(keys, values))
+
+
