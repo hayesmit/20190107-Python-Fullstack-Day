@@ -76,9 +76,3 @@ def combine_lists_to_dict(keys, values):
     {'a': 'apples', 'b': 'bananas', 'c': 'cherries'}
     """
     return dict(zip(keys, values))
-
-
-socks = ['ankle', 'knee']
-counts = [1, 9000]
-sock_count = combine_lists_to_dict(socks, counts)
-print(sock_count)
