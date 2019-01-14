@@ -2,16 +2,7 @@
 lab 14: pick 6 - lottery simulator
 """
 
-import random
-import time
-
-
-def pick6():
-    ticket = []
-    for i in range(6):
-        ticket.append(random.randint(1, 99))
-    return ticket
-
+import random, time
 
 def calculate_payout(winning, ticket):
     """
@@ -21,7 +12,7 @@ def calculate_payout(winning, ticket):
     :ticket: list of six ints
     returns int of dollars won based on number of matches
     """
-    payout = [0, 4, 7, 100, 50000, 1000000, 25000000f]
+    payout = [0, 4, 7, 100, 50000, 1000000, 25000000]
     # payout = {0: 0, 1: 4, 2: 7, 3: 100, 4: 50000, 5: 1000000, 6: 25000000}
     matches = 0
     for i in range(len(ticket)):
@@ -68,6 +59,5 @@ def main():
     for i in range(100):
         play100k()
     print(f'Finished 10,000,000 lotto calculations in {time.time() - start} seconds')
-
 
 main()
