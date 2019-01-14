@@ -81,3 +81,41 @@ def combine_lists_to_dict(keys, values):
     return dict(zip(keys, values))
 
 
+def eveneven(nums):
+    """ returns if there is an even number of even numbers in num
+    :num: list of ints
+
+    >>> eveneven([5, 6, 2])
+    True
+    >>> eveneven([5, 5, 2])
+    False
+    """
+    evens = [num for num in nums if num % 2 == 0] 
+    return len(evens) % 2 == 0
+
+    # evens = []
+    # for num in nums:
+    #     if num % 2 == 0:
+    #         evens.append(num)
+    # return len(evens) % 2 == 0
+
+
+def powers_of_two(n):
+    """ returns list of powers of 2 up to the nth power
+    :n: int
+
+    >>> powers_of_two(10)
+    [1, 2, 4, 8, 16, 32, 64, 128, 256, 512]
+    """
+    return [2**i for i in range(n)]
+
+# x = 0
+# def looping():
+#     x = 10  # local x 
+#     print('x in func', x)
+#     for x in range(10): # local x 
+#         print('x in loop', x)
+#     print('x in func', x)
+
+# looping()
+# print('x in main', x)

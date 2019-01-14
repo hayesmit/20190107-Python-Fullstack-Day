@@ -32,7 +32,6 @@ def calculate_payout(winning, ticket):
     # # print('num matches:', len(matches))
     # return payout[len(matches)]
 
-
 def play100k():
     # 1. Generate a list of 6 random numbers representing the winning ticket
     # 2. Start your balance at 0
