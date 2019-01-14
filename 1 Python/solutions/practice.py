@@ -109,6 +109,8 @@ def powers_of_two(n):
     """
     return [2**i for i in range(n)]
 
+
+# scope example
 # x = 0
 # def looping():
 #     x = 10  # local x 
