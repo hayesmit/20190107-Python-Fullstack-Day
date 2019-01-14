@@ -41,6 +41,7 @@ def calculate_payout(winning, ticket):
     # # print('num matches:', len(matches))
     # return payout[len(matches)]
 
+
 def play100k():
     # 1. Generate a list of 6 random numbers representing the winning ticket
     # 2. Start your balance at 0
@@ -68,5 +69,6 @@ def main():
     for i in range(100):
         play100k()
     print(f'Finished 10,000,000 lotto calculations in {time.time() - start} seconds')
+
 
 main()
