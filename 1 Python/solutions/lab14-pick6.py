@@ -2,7 +2,16 @@
 lab 14: pick 6 - lottery simulator
 """
 
-import random, time
+import random
+import time
+
+
+def pick6():
+    ticket = []
+    for i in range(6):
+        ticket.append(random.randint(1, 99))
+    return ticket
+
 
 def calculate_payout(winning, ticket):
     """
@@ -22,7 +31,7 @@ def calculate_payout(winning, ticket):
     if matches > 3:
         print(winning)
         print(ticket)
-        print(f'Won ${payout[matches]}')    
+        print(f'Won ${payout[matches]}')
 
     return payout[matches]
 
