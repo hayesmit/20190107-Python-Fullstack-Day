@@ -101,6 +101,17 @@ def draw_water(heights):
     return '\n'.join(mountain)    
 
 
+def draw_to_file(heights, filename):
+    mountain = draw(heights)
+    mountain_with_water = draw_water(heights)
+    with open(filename, 'w') as f:
+        print(heights, file=f)
+        f.write(mountain)
+        f.write('\n')
+        f.write(mountain_with_water)
+
+
+
 if __name__ == '__main__':
     data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
     print(data)
@@ -110,6 +121,7 @@ if __name__ == '__main__':
     print('peaks_and_valleys', peaks_and_valleys(data))  # → [6, 9, 14, 17]
     print()
     print(draw_water(data))
+    draw_to_file(data, 'mountains.txt')
 
     data = [1, 1, 1, 1, 1]
     print(data)

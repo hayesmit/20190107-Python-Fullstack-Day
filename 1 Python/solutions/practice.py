@@ -29,7 +29,7 @@ def opposite(a, b):
     >>> opposite(2, 3)
     False
     """
-    return (a >= 0 and b < 0) or (a < 0 and b >= 0)    
+    return (a >= 0 and b < 0) or (a < 0 and b >= 0)
     
     # # equivalent to above
     # if (a > 0 and b < 0):
@@ -55,6 +55,7 @@ def double_letters(text):
     # # equivalent using comprehensions
     # return ''.join([char*2 for char in text])
 
+
 def random_element(a):
     """
     returns random element selected from list a
@@ -62,8 +63,9 @@ def random_element(a):
     return random.choice(a)
     # return a[random.randint(0, len(a)-1)]
 
+
 # def combine_lists(list1, list2):
-#     """ 
+#     """
 #     returns combined list of alternating items
 
 #     >>> combine_lists([1,2,3], [4,5,6])
@@ -113,11 +115,38 @@ def powers_of_two(n):
 # scope example
 # x = 0
 # def looping():
-#     x = 10  # local x 
+#     x = 10  # local x
 #     print('x in func', x)
-#     for x in range(10): # local x 
+#     for x in range(10): # local x
 #         print('x in loop', x)
 #     print('x in func', x)
 
 # looping()
 # print('x in main', x)
+
+
+def missing_char(word):
+    """
+    returns a list of strings, each missing a different character from word
+
+    >>> missing_char('kitten')
+    ['itten', 'ktten', 'kiten', 'kiten', 'kittn', 'kitte']
+    """
+    # missing = []
+    # for i in range(len(word)):
+    #     left = word[:i] # 'kitte'
+    #     right = word[i+1:] # ''
+    #     missing.append(left + right)
+    # return missing
+
+    return [word[:i] + word[i+1:] for i in range(len(word))]
+
+
+def swap_keys_and_values(dictionary):
+    """
+    returns dictionary with keys and values swapped (using comprehensions)
+
+    >>> swap_keys_and_values({'a': 1, 'b': 2})
+    {1: 'a', 2: 'b'}
+    """
+    return {k: v for (v, k) in dictionary.items()}
