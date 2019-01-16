@@ -6,10 +6,6 @@ cwd = '.'           # using relative paths
 dir_path = os.path.join(cwd, dir_name)
 csv_to_dict = {}
 
-
-with open(os.path.join('data','frankenstein.txt')) as f:
-    contents = f.read()
-
 # loop through every file in the csvs directory
 for file_name in os.listdir(dir_path):
     # only look at csvs
@@ -19,7 +15,7 @@ for file_name in os.listdir(dir_path):
         with open(file_path) as f:
             # split csvs by newline char
             contents = f.read().split('\n') 
-        
+
         csv = [] # empty list of dicts
         keys = contents[0] # your keys, aka columns, are the first line in the csv
         keys = keys.split(',') # turn into list
@@ -40,6 +36,7 @@ for file_name in os.listdir(dir_path):
 
         csv_to_dict[file_name] = csv # add to dict 
 
-print(csv_to_dict)
-
-    
+for filename, csv in csv_to_dict.items():
+    print(filename)
+    for row in csv:
+        print(row)
