@@ -6,6 +6,10 @@ cwd = '.'           # using relative paths
 dir_path = os.path.join(cwd, dir_name)
 csv_to_dict = {}
 
+
+with open(os.path.join('data','frankenstein.txt')) as f:
+    contents = f.read()
+
 # loop through every file in the csvs directory
 for file_name in os.listdir(dir_path):
     # only look at csvs
@@ -37,3 +41,5 @@ for file_name in os.listdir(dir_path):
         csv_to_dict[file_name] = csv # add to dict 
 
 print(csv_to_dict)
+
+    
