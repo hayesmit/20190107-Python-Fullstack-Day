@@ -150,3 +150,46 @@ def swap_keys_and_values(dictionary):
     {1: 'a', 2: 'b'}
     """
     return {k: v for (v, k) in dictionary.items()}
+
+
+def latest_letter(string):
+    """ 
+    returns letter in string that appears latest in the english alphabet
+
+    >>> latest_letter('pneumonoultramicroscopicsilicovolcanoconiosis')
+    'v'
+    """
+    letters_reversed = sorted(string)
+    return letters_reversed[-1]
+    
+    # another solution
+    # return max(string)
+
+    # another solution
+    # max_letter = string[0]
+    # for letter in string:
+    #     if letter > max_letter:
+    #         max_letter = letter
+    # return max_letter
+
+def common_elements(list1, list2):
+    """
+    returns list of common elements between list1 and list2 
+
+    >>> common_elements([1,2,3,4], [0,2,4,6])
+    [2, 4]
+    """
+    return [i for i in list1 if i in list2]
+
+    # equivalent to comprehension above
+    # common_elem = []
+    # for i in list1:
+    #     if i in list2:
+    #         common_elem.append(i)
+    # return common_elem
+
+    # solution using set intersection
+    # set1 = set(list1)
+    # set2 = set(list2)
+
+    # return list(set1 & set2)
