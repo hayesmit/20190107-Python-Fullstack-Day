@@ -64,16 +64,6 @@ def random_element(a):
     # return a[random.randint(0, len(a)-1)]
 
 
-# def combine_lists(list1, list2):
-#     """
-#     returns combined list of alternating items
-
-#     >>> combine_lists([1,2,3], [4,5,6])
-#     [1, 4, 2, 5, 3, 6]
-#     """
-#     pass
-
-
 def combine_lists_to_dict(keys, values):
     """ returns dict of keys zipped to values
 
@@ -193,3 +183,35 @@ def common_elements(list1, list2):
     # set2 = set(list2)
 
     # return list(set1 & set2)
+
+
+def combine_lists(list1, list2):
+    """
+    returns combined list of alternating items
+
+    >>> combine_lists([1,2,3], [4,5,6])
+    [1, 4, 2, 5, 3, 6]
+    """
+    # zipped = list(zip(list1, list2))
+    # combined = []
+    # for i in range(len(zipped)):
+    #     combined.append(zipped[i][0])
+    #     combined.append(zipped[i][1])
+    # return combined
+
+    # combined = []
+    # for i in range(len(list1)):
+    #     combined.append(list1[i])
+    #     combined.append(list2[i])
+    # return combined
+
+    return [i for j in zip(list1, list2) for i in j]
+
+    # equivalent to comprehension above
+    # combined = []    
+    # for j in zip(list1, list2):
+    #     print('j', j)
+    #     for i in j:
+    #         print('i', i)
+    #         combined.append(i)
+    # return combined
