@@ -18,12 +18,13 @@ In the `hand` module, implement methods that:
 
 * Add a card to a hand
 * Allow a user to type in a hand and have it be converted into a `Hand` object
+* Score a hand
 
 In the `game` module, implement top-level functions that:
 
 * Start a new game of Blackjack, or Quit
-* Score a hand
 * Bust if the score is over 21
+* Loop through game
 
 ## Scoring
 
