@@ -1,7 +1,7 @@
 
 # Lab 25: ATM
 
-Let's represent an ATM with a class containing two attributes: a balance and an interest rate. A newly created account will default to a balance of 0. Implement the initializer, as well as the following functions:
+Let's represent an ATM with a class containing two attributes: a balance. A newly created account will default to a balance of 0. Implement the initializer, as well as the following functions:
 
 - `check_balance()` returns the account balance
 - `deposit(amount)` deposits the given amount in the account
