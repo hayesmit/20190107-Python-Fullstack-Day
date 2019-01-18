@@ -215,3 +215,85 @@ def combine_lists(list1, list2):
     #         print('i', i)
     #         combined.append(i)
     # return combined
+
+
+def mean(nums):
+    """
+    returns avg of nums
+
+    >>> mean([1,1,1,1])
+    1.0
+    >>> mean([1,2,3,4])
+    2.5
+    """
+    total = 0 
+    for num in nums:
+        total += num
+    return total / len(nums)
+
+
+def minimum(nums):
+    """python python
+    returns min of nums
+
+    >>> minimum([1,-1,-9000,999])
+    -9000
+    >>> minimum([1,2,3,4])
+    1
+    """
+    nums.sort(reverse=True)
+    return nums.pop()
+
+    # running_min = float('inf')
+    # for num in nums:
+    #     if num < running_min:
+    #         running_min = num
+    # return running_min
+
+
+def maximum(nums):
+    """
+    returns max of nums
+
+    >>> maximum([1,-1,-9000,999])
+    999
+    >>> maximum([1000,2,3,4])
+    1000
+    """
+    # nums.sort()
+    # return nums.pop()
+
+    running_max = float('-inf')
+    for num in nums:
+        if num > running_max:
+            running_max = num
+    return running_max
+
+
+def mode(nums):
+    """
+    returns list of most frequently occuring number(s) in nums
+
+    >>> mode([1,2,3,2])
+    [2]
+    >>> mode([1,1,1,1])
+    [1]
+    >>> mode([1,2,3,4])
+    [1, 2, 3, 4]
+    """
+    count = {}
+    for num in nums:
+        if num not in count:
+            count[num] = 1 
+        else:
+            count[num] += 1
+
+    # return max(count.items(), key=lambda x:x[1])[0]
+    modes = []
+    max_value = maximum(count.values())
+    for k, v in count.items():
+        if v == max_value:
+            modes.append(k)
+    return modes
+
+# print(mode([1,2,4,4]))
