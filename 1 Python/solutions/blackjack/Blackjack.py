@@ -14,7 +14,7 @@ class Hand:
         # equivalent to above
         face = [(fc, 10) for fc in 'JQK']
         number = [(num, num) for num in range(2, 11)]
-        self.points = dict(face + number)
+        self.points = dict([('A', 1)] + face + number)
 
     def __repr__(self):
         """
@@ -24,15 +24,25 @@ class Hand:
 
     def score(self):
         """
-        returns total of points in hand
+        returns total of points in hand (handles ace hi/lo)
         """
-        return sum([self.points[card.rank] for card in self.cards])
+        # handle ace hi/lo
+        points = 0
+        aces = None
+        for card in self.cards:
+            points += self.points[card.rank]
+            if card.rank == 'A': # change aces flag to true
+                aces = True
 
-        # # equivalent to comprehension above
-        # total = 0
-        # for card in self.cards:
-        #   total += self.points[card.rank]
-        # return total
+        # if we have at least one ace and our total points <= 11,
+        # choose ace high
+        if points <= 11 and aces:
+            points += 10
+
+        return points
+
+        # # old solution (doesn't handle ace hi/lo)
+        # return sum([self.points[card.rank] for card in self.cards])
 
     def add(self, card):
         """
