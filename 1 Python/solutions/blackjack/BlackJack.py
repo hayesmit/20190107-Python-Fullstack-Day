@@ -12,11 +12,9 @@ class Hand:
         self.cards = [card1, card2]
         # self.points = {'A': 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 'J': 10, 'Q': 10, 'K': 10}
         # equivalent to above
-        face = {k: 10 for k in 'JQK'}
-        number = {k:k for k in range(2,11)}
-        self.points = {'A': 1}
-        self.points.update(number)
-        self.points.update(face)
+        face = [(fc, 10) for fc in 'JQK']
+        number = [(num, num) for num in range(2, 11)]
+        self.points = dict(face + number)
 
     def __repr__(self):
         """
