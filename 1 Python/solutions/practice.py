@@ -297,3 +297,45 @@ def mode(nums):
     return modes
 
 # print(mode([1,2,4,4]))
+
+from functools import reduce
+import time
+def combine_all(list_of_lists):
+    """
+    returns list of all the lists in list_of_lists combined
+
+    >>> combine_all([[5,2,3],[4,5,1],[7,6,3]])
+    [5, 2, 3, 4, 5, 1, 7, 6, 3]
+    """
+    all_nums = []
+    # # start = time.clock()
+    # for i in range(len(list_of_lists)):
+    #     for j in range(len(list_of_lists[i])):
+    #         all_nums.append(list_of_lists[i][j])
+    # # print(f'nested loop runs in {time.clock() - start}')
+
+    # start = time.clock()
+    for i in range(len(list_of_lists)):
+        all_nums.extend(list_of_lists[i])
+    # print(f'extend loop runs in {time.clock() - start}')
+
+    # # start = time.clock()
+    # all_nums = reduce(lambda acc,cur: acc+cur, list_of_lists)
+    # # print(f'reduce runs in {time.clock() - start}') 
+    return all_nums
+
+
+def count_letter(letter, word):
+    """
+    returns the number of letter occurances in word
+    
+    >>> count_letter('i', 'antidisestablishmenterianism')
+    5
+    >>> count_letter('p', 'pneumonoultramicroscopicsilicovolcanoconiosis')
+    2
+    """
+    count = 0 
+    for char in list(word):
+        if char == letter:
+            count += 1
+    return count
