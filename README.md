@@ -18,6 +18,32 @@ M-F 9:30 am – 4:30 pm
 - Merritt Lawrenson
     - merritt@pdxcodeguild.com
 
+## Python Labs Assigned:
+
+Lab 01 - Lab 21  
+Lab 23  
+Lab 25 - Lab 27  
+Tuesday 1/29???: Presentations for your final project utilizing the Python library of your choice
+
+## Python Labs Optional:
+
+###### Strongly Recommended:
+Practice 01  
+Practice 02  
+Practice 03  
+Practice 04  
+Practice 05  
+
+###### Optional Labs:
+Lab 22  
+Lab 24  
+Optional - LCR Simulator  
+Optional - Road Trip  
+Optional - Sock Sorter  
+Optional - Arbitrary Precision Arithmetic  
+Optional - Crime Data  
+Optional - Tree
+
 ## Student Presentations
 
 At the end of the Python and JavaScript sections, you'll give a presentation on an assignment of your choice. This is practice for your capstone presentation which you'll give on the last day of class.
