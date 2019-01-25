@@ -23,7 +23,7 @@ M-F 9:30 am – 4:30 pm
 Lab 01 - Lab 21  
 Lab 23  
 Lab 25 - Lab 27  
-Tuesday 1/29???: Presentations for your final project utilizing the Python library of your choice
+Tuesday 1/29: Presentations for your final project utilizing the Python library of your choice
 
 ## Python Labs Optional:
 
