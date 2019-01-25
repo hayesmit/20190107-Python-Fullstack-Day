@@ -339,3 +339,24 @@ def count_letter(letter, word):
         if char == letter:
             count += 1
     return count
+
+
+def fibonacci(n):
+    """
+    returns a list of the first n fibonacci numbers
+
+    >>> fibonacci(10)
+    [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+    """
+    return [calc_fib(i) for i in range(n)]
+
+
+def calc_fib(n):
+    """
+    returns the nth fibonacci number
+    """
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    return calc_fib(n-2) + calc_fib(n-1)
