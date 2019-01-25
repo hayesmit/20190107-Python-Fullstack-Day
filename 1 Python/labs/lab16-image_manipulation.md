@@ -1,6 +1,6 @@
 # Lab 16: Image Manipulation
 
-Let's convert an image into greyscale using the Pillow library, which is a fork of PIL 'python image library'. First download the file from [here](https://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png) and place it in the same directory as your code (or save it anywhere and use an absolute path when opening it). If you don't have pillow installed, run `pip install pillow` in a terminal. You can check if pillow using `pip show pillow`.
+Let's convert an image into greyscale using the Pillow library, which is a fork of PIL 'python image library'. First download the file from [here](https://upload.wikimedia.org/wikipedia/en/7/7d/Lenna_%28test_image%29.png) and place it in the same directory as your code (or save it anywhere and use an absolute path when opening it). If you don't have pillow installed, run `pip install pillow` in a terminal. You can check if pillow using `pip show pillow`.
 
 Use the formula for converting to greyscale and the code below. Remember that Pillow uses `ints` for RGB values, in the range of 0-255, whereas your math will often use `floats`. 'Y' is used to represent the brightness. The following formula get the brightness of an RGB triplet. To convert to greyscale, set R, G, and B to Y.
 
@@ -28,7 +28,7 @@ img.show()
 
 ## Version 2
 
-Use the `colorsys` library to increase the saturation, decrease the saturation, and rotate the hue. Colorsys represents colors as floats in the range 0.0 - 1.0, whereas pillow uses ints in the range 0 - 255. You'll have to convert between these two representations.
+Use the `colorsys` library to increase the saturation, decrease the brightness, and rotate the hue. Colorsys represents colors as floats in the range 0.0 - 1.0, whereas pillow uses ints in the range 0 - 255. You'll have to convert between these two representations.
 
 ```python
 import colorsys

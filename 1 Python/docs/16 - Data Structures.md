@@ -103,7 +103,7 @@ print(list_of_letters_in_mississippi) #> ['m', 'p', 's', 'i']
 
 ## Stack
 
-A stack is a collection of nodes with operations occuring at one end only. Think of a real-world stack of plates - plates can only be taken from or added to the top of the pile in a First In Last Out (LIFO) operation. We both *push* and *pop* items at the tail.
+A stack is a collection of nodes with operations occuring at one end only. Think of a real-world stack of plates - plates can only be taken from or added to the top of the pile in a Last In First Out (LIFO) operation. We both *push* and *pop* items at the tail.
 
 Simple Python stack implementation (uses lists):
 ```py
@@ -202,10 +202,10 @@ def Tree():
 
                         #                        1
 tree = Tree()           #                      / | \  
-tree[1][2][5] = 6       #                    2   3   4  
-tree[1][3] = 7          #                    |   |    /\
+tree[1][2][5][6]        #                    2   3   4  
+tree[1][3] = Tree(7)    #                    |   |    /\
 tree[1][4][8]           #                    5   7   8  9
-tree[1][4][9] = 10      #                    |          |
+tree[1][4][9][10]       #                    |          |
                         #                    6          10
 
 # We can print out the tree as json
